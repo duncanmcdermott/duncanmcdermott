@@ -429,27 +429,6 @@ class HardwareStoreDB(BaseDB):
         Check if there are any files that need to be loaded
         into the database, and pass them to load_hardware_file
         '''
-
-        # # Ensure directories exist
-        # os.makedirs(PATH_TO_LOAD, exist_ok=True)
-        # os.makedirs(PATH_LOADED, exist_ok=True)
-
-        # files = glob(PATH_TO_LOAD + FILE_PATTERN)
-        
-        # for file in files:
-        #     print(f'Loading {file}')
-        #     try:
-        #         # Code to load hardware data
-        #         self.load_hardware_file(file)
-
-        #         # If the file loaded succesfully, move it into the loaded directory
-        #         os.rename(file, file.replace(PATH_TO_LOAD, PATH_LOADED))
-        #         print(f"Moved file {file} to {file.replace(PATH_TO_LOAD, PATH_LOADED)}")
-        #     except Exception as e:
-        #         print(f"Problem loading file: {file}\n{traceback.format_exc()}")
-        
-        # #print(f"Files to load: {files}") # remove later
-
             # Ensure directories exist
         os.makedirs(PATH_TO_LOAD, exist_ok=True)
         os.makedirs(PATH_LOADED, exist_ok=True)
